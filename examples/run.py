@@ -98,9 +98,9 @@ def construct_society(question: str) -> RolePlaying:
         *AudioAnalysisToolkit().get_tools(),  # This requires OpenAI Key
         *CodeExecutionToolkit(sandbox="subprocess", verbose=True).get_tools(),
         *ImageAnalysisToolkit(model=models["image"]).get_tools(),
-        # SearchToolkit().search_duckduckgo,  # Disabled - DuckDuckGo
+        # # SearchToolkit().search_duckduckgo,  # Disabled - reliability issues  # Disabled - DuckDuckGo
         SearchToolkit().search_brave,  # Brave Search API configured
-        # SearchToolkit().search_google,  # Uncomment and add GOOGLE_API_KEY + SEARCH_ENGINE_ID to enable
+        # # SearchToolkit().search_google,  # Disabled - requires GOOGLE_API_KEY + SEARCH_ENGINE_ID
         SearchToolkit().search_wiki,
         *ExcelToolkit().get_tools(),
         *DocumentProcessingToolkit(model=models["document"]).get_tools(),
