@@ -21,6 +21,8 @@ services:
       - ~/.cache/playwright:/root/.cache/ms-playwright
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - BRAVE_API_KEY=${BRAVE_API_KEY}
+      - FIRECRAWL_API_KEY=${FIRECRAWL_API_KEY}
       - DISPLAY=:99
       - PYTHONDONTWRITEBYTECODE=1
       - PYTHONUNBUFFERED=1
